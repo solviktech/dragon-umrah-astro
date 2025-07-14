@@ -1,47 +1,49 @@
-# Astro Starter Kit: Minimal
+# Dragon Umrah Astro
 
-```sh
-npm create astro@latest -- --template minimal
+这是 Dragon Umrah 的 Astro 网站项目。
+
+## 本地开发
+
+```bash
+# 安装依赖
+npm install
+
+# 启动开发服务器
+npm run dev
+
+# 构建生产版本
+npm run build
+
+# 预览构建结果
+npm run preview
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## 部署到 GitHub Pages
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### 方法 1：使用 GitHub Actions（推荐）
 
-## 🚀 Project Structure
+1. 将代码推送到 GitHub 仓库
+2. 在仓库设置中启用 GitHub Pages：
+   - 进入 Settings > Pages
+   - Source 选择 "GitHub Actions"
+3. 推送代码到 master 分支，GitHub Actions 会自动构建并部署
 
-Inside of your Astro project, you'll see the following folders and files:
+### 方法 2：手动部署
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+# 使用 gh-pages 包部署
+npm run deploy
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### 访问网站
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+部署成功后，网站将在以下地址可用：
+```
+https://[你的用户名].github.io/dragon-umrah-astro/
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 注意事项
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- 项目已配置 `base: '/dragon-umrah-astro/'`，适合 GitHub Pages 部署
+- `.nojekyll` 文件确保 `_astro` 目录不被 GitHub Pages 忽略
+- 所有静态资源路径都已正确配置

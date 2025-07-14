@@ -4,11 +4,11 @@
 
 <section id="services" class="w-full">
   <!-- 顶部主图 -->
-  <img src="/images/service.JPG" alt="Our Services" class="w-full h-auto object-cover mb-8 rounded-lg" />
+  <img src={`${import.meta.env.BASE_URL}images/service.JPG`} alt="Our Services" class="w-full h-auto object-cover mb-8 rounded-lg" />
 
   <!-- Service Item 1 -->
   <div class="w-full bg-cover bg-center border-b border-gray-700 animate-fade-in"
-       style="background-image: url('/images/service-bg.JPG')">
+       style={`background-image: url('${import.meta.env.BASE_URL}images/service-bg.JPG')`}>
     <div class="flex flex-col md:flex-row md:justify-between md:items-center bg-black/40 p-8 md:p-12">
       <!-- Text Content -->
       <div class="max-w-lg text-white mb-6 md:mb-0">
@@ -31,7 +31,7 @@
 
   <!-- Service Item 2 -->
   <div class="w-full bg-cover bg-center border-b border-gray-700 animate-fade-in"
-       style="background-image: url('/images/service-bg.JPG')">
+       style={`background-image: url('${import.meta.env.BASE_URL}images/service-bg.JPG')`}>
     <div class="flex flex-col md:flex-row md:justify-between md:items-center bg-black/40 p-8 md:p-12">
       <div class="max-w-lg text-white mb-6 md:mb-0">
         <h3 class="text-xl font-bold mb-4 flex items-center">🍽️ Group Meal Coordination</h3>
@@ -52,7 +52,7 @@
 
   <!-- Service Item 3 -->
   <div class="w-full bg-cover bg-center border-b border-gray-700 animate-fade-in"
-       style="background-image: url('/images/service-bg.JPG')">
+       style={`background-image: url('${import.meta.env.BASE_URL}images/service-bg.JPG')`}>
     <div class="flex flex-col md:flex-row md:justify-between md:items-center bg-black/40 p-8 md:p-12">
       <div class="max-w-lg text-white mb-6 md:mb-0">
         <h3 class="text-xl font-bold mb-4 flex items-center">🚌 Group Transport Support</h3>
