@@ -1,0 +1,113 @@
+---
+import 'swiper/css';
+import 'swiper/css/pagination';
+---
+
+<!-- Dragon Umrah Testimonials - Final Version -->
+<!-- ✅ 自动轮播 ✅ Pagination 分页器 ✅ 毛玻璃 ✅ 响应式 ✅ 结构无误 -->
+
+<section
+  id="testimonials"
+  class="relative py-20 text-white text-center"
+  style="background-image: url(/images/contant-bg.webp); background-size: cover; background-position: center;"
+>
+  <!-- 标题容器带毛玻璃 -->
+  <div class="max-w-2xl mx-auto mb-8 px-6 py-4 bg-black/50 backdrop-blur rounded-xl">
+    <h2 class="text-3xl md:text-4xl font-bold">
+      Feedback from our customers
+    </h2>
+  </div>
+
+  <!-- Swiper 主容器 -->
+  <div class="swiper w-full max-w-2xl mx-auto">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <div class="bg-black/50 backdrop-blur px-6 py-6 rounded-xl shadow-lg">
+          <p class="text-xl italic mb-4">“Their local support in Makkah saved us time and stress. Smooth hotel check-in and quick transport.”</p>
+          <p class="font-semibold">— Nurul A., Group Leader – Kuala Lumpur</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <div class="bg-black/50 backdrop-blur px-6 py-6 rounded-xl shadow-lg">
+          <p class="text-xl italic mb-4">“We didn’t need full packages, just hotel + food. Barakah arranged it all with no drama.”</p>
+          <p class="font-semibold">— Imran S., Travel Coordinator – Johor</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <div class="bg-black/50 backdrop-blur px-6 py-6 rounded-xl shadow-lg">
+          <p class="text-xl italic mb-4">“We had to change dinner timing last minute – they handled it instantly. Very responsive.”</p>
+          <p class="font-semibold">— Siti H., Organizer – Penang</p>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="swiper-slide">
+        <div class="bg-black/50 backdrop-blur px-6 py-6 rounded-xl shadow-lg">
+          <p class="text-xl italic mb-4">“This is not a big company, but they really take care of your group like one.”</p>
+          <p class="font-semibold">— Azlan M., Umrah Agent – Selangor</p>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="swiper-slide">
+        <div class="bg-black/50 backdrop-blur px-6 py-6 rounded-xl shadow-lg">
+          <p class="text-xl italic mb-4">“Meals were on time, hotel was clean, driver was polite. That’s all we wanted. We got it.”</p>
+          <p class="font-semibold">— Ahmad F., DIY Group Head – Jakarta</p>
+        </div>
+      </div>
+
+      <!-- Slide 6 -->
+      <div class="swiper-slide">
+        <div class="bg-black/50 backdrop-blur px-6 py-6 rounded-xl shadow-lg">
+          <p class="text-xl italic mb-4">“Communication was simple. Even with language issues, they made it easy with photos and updates.”</p>
+          <p class="font-semibold">— Yusuf N., Tour Planner – Bandung</p>
+        </div>
+      </div>
+
+      <!-- Slide 7 -->
+      <div class="swiper-slide">
+        <div class="bg-black/50 backdrop-blur px-6 py-6 rounded-xl shadow-lg">
+          <p class="text-xl italic mb-4">“They helped us find affordable hotels near Haram, even during busy dates. Very helpful.”</p>
+          <p class="font-semibold">— Lina M., Admin | Small Hajj Group, Brunei</p>
+        </div>
+      </div>
+
+      <!-- Slide 8 -->
+      <div class="swiper-slide">
+        <div class="bg-black/50 backdrop-blur px-6 py-6 rounded-xl shadow-lg">
+          <p class="text-xl italic mb-4">“I was nervous handling a group from overseas. Having someone reliable in Makkah made a big difference.”</p>
+          <p class="font-semibold">— Farah Z., Freelance Organizer – Singapore</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 分页器容器 -->
+    <div class="swiper-pagination mt-6"></div>
+  </div>
+
+  <!-- Swiper 初始化脚本 -->
+  <script type="module" is:inline>
+    import Swiper, { Autoplay, Pagination } from 'swiper';
+
+    Swiper.use([Autoplay, Pagination]);
+
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      slidesPerView: 1,
+      spaceBetween: 20,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+</section>

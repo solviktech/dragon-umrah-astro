@@ -1,0 +1,75 @@
+---
+/* Contact.astro - Dragon Umrah 最终版
+   包含地图、联系信息、WhatsApp 按钮、整齐卡片表单
+*/
+---
+
+<section id="contact" class="py-20 px-4 bg-black text-white text-center">
+  <!-- Google Map -->
+  <div class="mb-8">
+    <iframe
+      class="w-full h-64 rounded-lg"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.061878095977!2d39.8413416!3d21.4007936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c204f5e649d6fb%3A0x5075b83175f1ef1a!2sAziziyah%2C%20Makkah%2024243%2C%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1689757594870!5m2!1sen!2ssa"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+
+  <!-- Contact Info -->
+  <h2 class="text-3xl font-bold mb-2">Waiting for you in Makkah!</h2>
+  <p class="mb-4">MCAA8844، 8844 الاحسان، 2334، حي العزيزية، Makkah 24243, Saudi Arabia</p>
+  <p class="mb-4">+966 0500061337</p>
+
+  <!-- WhatsApp Button -->
+  <a
+    href="https://wa.me/966500061337"
+    target="_blank"
+    class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full mb-8"
+  >
+    Send a WhatsApp
+  </a>
+
+  <!-- Contact Form Card -->
+  <div class="max-w-2xl mx-auto bg-gray-900 bg-opacity-80 backdrop-blur p-8 rounded-xl text-left">
+    <h3 class="text-2xl font-bold mb-4 text-center">Ask Anything</h3>
+    <form action="mailto:contact@dragonumrah.com" method="POST" enctype="text/plain" class="space-y-4">
+      <div>
+        <label class="block text-sm mb-1">Name*</label>
+        <input
+          type="text"
+          name="name"
+          required
+          placeholder="Your Name"
+          class="w-full p-3 rounded bg-black border border-gray-600"
+        />
+      </div>
+      <div>
+        <label class="block text-sm mb-1">E-mail address*</label>
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="Your Email"
+          class="w-full p-3 rounded bg-black border border-gray-600"
+        />
+      </div>
+      <div>
+        <label class="block text-sm mb-1">Message*</label>
+        <textarea
+          name="message"
+          required
+          rows="4"
+          placeholder="Your Message"
+          class="w-full p-3 rounded bg-black border border-gray-600"
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-full"
+      >
+        Send
+      </button>
+    </form>
+  </div>
+</section>

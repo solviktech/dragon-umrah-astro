@@ -1,0 +1,82 @@
+---
+const images = [
+  '/images/hotel1.PNG',
+  '/images/hotel2.PNG',
+  '/images/hotel3.PNG',
+  '/images/hotel4.PNG',
+  '/images/hotel5.PNG',
+  '/images/hotel6.PNG',
+  '/images/hotel7.PNG',
+];
+---
+
+<section class="py-12 text-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-4 border-b border-gray-700 pb-2">Showcase</h2>
+
+    <!-- Main Carousel -->
+    <div class="relative overflow-hidden mb-4 w-full h-64 md:h-96">
+      <!-- Slider -->
+      <div 
+        id="slider-track"
+        class="flex transition-transform duration-700 ease-in-out w-full h-full"
+        style="width: calc(100% * {images.length});"
+      >
+        {images.map((src) => (
+          <img src={src} alt="Showcase Image" class="w-full h-full flex-shrink-0 object-cover rounded" />
+        ))}
+      </div>
+
+      <!-- Prev Button -->
+      <button 
+        class="absolute top-1/2 -translate-y-1/2 left-4 bg-white bg-opacity-30 hover:bg-opacity-50 text-black rounded-full w-10 h-10 flex items-center justify-center shadow-lg"
+        on:click="prevImage()"
+      >
+        &#8592;
+      </button>
+
+      <!-- Next Button -->
+      <button 
+        class="absolute top-1/2 -translate-y-1/2 right-4 bg-white bg-opacity-30 hover:bg-opacity-50 text-black rounded-full w-10 h-10 flex items-center justify-center shadow-lg"
+        on:click="nextImage()"
+      >
+        &#8594;
+      </button>
+    </div>
+
+    <!-- Thumbnails -->
+    <div class="flex space-x-2 overflow-x-auto pb-2">
+      {images.map((src, idx) => (
+        <img 
+          src={src} 
+          alt={`Thumbnail ${idx+1}`} 
+          class="thumbnail w-24 h-16 object-cover rounded opacity-70 hover:opacity-100 cursor-pointer transition border-2 border-transparent"
+          on:click={`switchImage(${idx})`}
+        />
+      ))}
+    </div>
+  </div>
+
+  <script type="module">
+    let currentIndex = 0;
+    const total = {images.length};
+    const track = document.getElementById('slider-track');
+    const thumbs = document.querySelectorAll('.thumbnail');
+
+    function showImage(idx) {
+      if (idx < 0) idx = total - 1;
+      if (idx >= total) idx = 0;
+      currentIndex = idx;
+      track.style.transform = `translateX(-${idx * 100}%)`;
+      thumbs.forEach((t, i) => {
+        t.classList.toggle('border-white', i === idx);
+      });
+    }
+
+    window.switchImage = showImage;
+    window.prevImage = () => showImage(currentIndex - 1);
+    window.nextImage = () => showImage(currentIndex + 1);
+
+    showImage(0);
+  </script>
+</section>
